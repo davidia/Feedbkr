@@ -43,5 +43,9 @@ module Feedbkr
 
     # Enable the asset pipeline
     config.assets.enabled = true
+
+    config.action_mailer.delivery_method   = :postmark
+    config.action_mailer.postmark_settings = { :api_key => "97e65fa7-5efb-4027-99f5-4c274877d9e9" }
+
   end
 end

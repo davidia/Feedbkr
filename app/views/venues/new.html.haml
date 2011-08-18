@@ -1,0 +1,13 @@
+%h2 Create Venue
+= form_for(@venue) do |f|
+  -if @venue.errors.any?
+    %ul
+    -@venue.errors.full_messages.each do |msg|
+      %li= msg   
+
+  %p
+    = f.label :name
+    %br/
+    = f.text_field :name
+  %p= f.submit "Create"
+

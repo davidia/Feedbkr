@@ -1,4 +1,8 @@
-%h1 Users#show
-%p
-	User 
-	=@user.name
+%h1 Your Feedback
+
+-if @user.venues.any?
+  %ul
+    -@user.venues.each do |v|
+      %li=link_to v.name, venue_feedback_index_url(v)
+
+= link_to 'Add Venue', new_venue_path

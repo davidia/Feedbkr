@@ -1,0 +1,16 @@
+%h2 Submit Feedback For #{@venue.name}
+= form_for [@venue,@feedback] do |f|
+  -if @feedback.errors.any?
+    %ul
+      -@feedback.errors.full_messages.each do |msg|
+        %li= msg   
+  %p
+    = f.label :text,'Your Feedback'
+    %br/
+    = f.text_area :text
+  %p
+    = f.label :source,'Your Email'
+    %br/
+    = f.email_field :source
+  %p= f.submit "Submit"
+

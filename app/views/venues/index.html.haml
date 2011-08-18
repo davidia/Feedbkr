@@ -1,0 +1,5 @@
+%h1 Venues
+
+%ul
+  -@venues.each do |venue|
+    %li= link_to venue.name, new_venue_feedback_path(venue)

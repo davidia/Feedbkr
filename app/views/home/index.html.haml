@@ -1,7 +1,11 @@
-%h1 Home#index
+%h1 Feedbkr
+
+
+%p Let your customers share their thoughts
+
 %p Find me in app/views/home/index.html.haml
 
 - @users.each do |user|
   %p
     User:
-    = link_to  user.name,user
+    = link_to  user.email,user

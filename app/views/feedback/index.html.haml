@@ -1,0 +1,7 @@
+%h1 #{@venue.name} Feedback
+%ul
+  -@feedback.each do |f|
+    %li
+      =f.text
+      %br/
+      =f.source

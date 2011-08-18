@@ -2,7 +2,11 @@ Feedbkr::Application.routes.draw do
   
   devise_for :users
   
-  resources :users, :only => :show
+  resources :users  , :only => :show
+  
+  resources :venues  , :only => [:new,:create,:index] do
+    resources :feedback , :only => [:new,:create,:index]
+  end
 
   root :to => "home#index"
  

@@ -1,7 +1,9 @@
 class HomeController < ApplicationController
 
 def index
-  @users = User.all
+  if authenticate_user! then
+    redirect_to current_user
+  end
 end
 
 end
