@@ -4,7 +4,7 @@ Feedbkr::Application.routes.draw do
   
   resources :users  , :only => :show
   
-  resources :venues  , :only => [:new,:create,:index] do
+  resources :venues  , :only => [:new,:create,:index,:show] do
     resources :feedback , :only => [:new,:create,:index]
   end
 

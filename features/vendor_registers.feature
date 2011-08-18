@@ -7,8 +7,8 @@ Feature: Vendor registers
   Scenario: Sign up
     Given I am not authenticated
     When I go to the home page
-    And I click on "Sign Up"
+    And I follow "Sign up"
     And I register with email "dave@test.com" and password "secret"
-    Then there should be a user with email "dave@test.com" and password "secret"
-    And I should be redirected to my control panel
+    Then I should be redirected to my control panel 
+    And I can login as "dave@test.com" with password "secret"   
    

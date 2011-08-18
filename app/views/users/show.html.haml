@@ -1,8 +1,12 @@
-%h1 Your Feedback
+%h1 Control Panel
 
 -if @user.venues.any?
   %ul
     -@user.venues.each do |v|
-      %li=link_to v.name, venue_feedback_index_url(v)
+      %li
+        =succeed ' ' do
+          =v.name        
+          =link_to 'Feedback', venue_feedback_index_url(v)
+          =link_to 'Resources', venue_path(v)
 
 = link_to 'Add Venue', new_venue_path

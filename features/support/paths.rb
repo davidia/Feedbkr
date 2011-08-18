@@ -28,6 +28,9 @@ module NavigationHelpers
     when /^the web feedback page for "([^"]*)"$/      
       new_venue_feedback_path get_venue($1)
 
+    when /^the venue page for "([^"]*)"$/      
+      venue_path get_venue($1)
+
     when /^the feedback page for "([^"]*)"$/      
       venue_feedback_index_url get_venue($1)
     else    

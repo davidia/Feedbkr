@@ -1,5 +1,12 @@
+require 'google-qr'
+
 class VenuesController < ApplicationController
   before_filter :authenticate_user!
+
+  def show    
+    @venue = Venue.find(params[:id])
+    @chart = GoogleQR.new(:data => venue_feedback_index_url(@venue), :size => "100x100").render
+  end
 
   def index
     @venues = Venue.all

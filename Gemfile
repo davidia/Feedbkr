@@ -41,3 +41,4 @@ gem "rails-footnotes", ">= 3.7", :group => :development
 
 
 gem 'postmark-rails'
+gem 'google-qr'
