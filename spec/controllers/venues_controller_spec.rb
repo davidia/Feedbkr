@@ -16,7 +16,7 @@ describe VenuesController do
 
     it "prepares the QR code" do      
       
-      GoogleQR.should_receive(:new).with("data" => venue_feedback_index_url(venue),"size" => "100x100")
+      GoogleQR.should_receive(:new).with("data" => new_venue_feedback_url(venue),"size" => "100x100")
       get :show, id: 1 
       #chart = GoogleQR.new(:data => "SomeDataToQRify", :size => "100x100")          
     end

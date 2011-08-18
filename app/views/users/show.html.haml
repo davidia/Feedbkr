@@ -6,7 +6,7 @@
       %li
         =succeed ' ' do
           =v.name        
-          =link_to 'Feedback', new_venue_feedback_url(v)
+          =link_to 'Feedback', venue_feedback_index_url(v)
           =link_to 'Resources', venue_path(v)
 
 = link_to 'Add Venue', new_venue_path

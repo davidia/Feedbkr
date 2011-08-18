@@ -5,7 +5,7 @@ class VenuesController < ApplicationController
 
   def show    
     @venue = Venue.find(params[:id])
-    @chart = GoogleQR.new(:data => venue_feedback_index_url(@venue), :size => "100x100").render
+    @chart = GoogleQR.new(:data => new_venue_feedback_url(@venue), :size => "100x100").render
   end
 
   def index
