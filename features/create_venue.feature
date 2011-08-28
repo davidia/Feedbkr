@@ -1,7 +1,7 @@
 
 Feature: Create Venue
 
-  As a vedor
+  As a vendor
   I want to create a venue
   So that customers at that venue can give me feedback
 

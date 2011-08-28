@@ -6,12 +6,20 @@
     = javascript_include_tag :application
     = csrf_meta_tags
   %body
-
-    %ul.hmenu
-      = render 'devise/menu/registration_items' 
-      = render 'devise/menu/login_items' 
-  
-
-    - flash.each do |name, msg|
+    
+    %div.topbar
+      %div.fill
+        %div.container-fluid
+          %h3=link_to 'FeedBkr','#'
+          %ul
+            = render 'devise/menu/registration_items' 
+            = render 'devise/menu/login_items' 
+    -flash.each do |name, msg|
       = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
-    = yield
+    
+
+    %div.container-fluid
+      %div.sidebar
+        = yield :sidebar
+      %div.content
+        = yield

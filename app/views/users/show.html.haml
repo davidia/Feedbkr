@@ -1,12 +1,31 @@
+= content_for :sidebar do  
+  %h3 Venues
+  -@venues.each do |v|
+    =link_to v.name, venue_path(v)
+  =link_to 'Add Venue', new_venue_path
+
+
 %h1 Control Panel
 
--if @user.venues.any?
-  %ul
-    -@user.venues.each do |v|
-      %li
-        =succeed ' ' do
-          =v.name        
-          =link_to 'Feedback', venue_feedback_index_url(v)
-          =link_to 'Resources', venue_path(v)
 
-= link_to 'Add Venue', new_venue_path
+-@feedback.each do |f|
+  %div.row
+    %div.bubble.span10.columns
+      %div.comment
+        %div.chead
+          =f.venue.name
+          %div.timestamp
+            %span.source=f.source
+            %br/
+            %span.created-at=f.created_at          
+        %div.body= f.text
+        %div.f
+          %button.btn.small Reply
+          %button.btn.small Delete
+              
+        
+
+
+
+    
+   

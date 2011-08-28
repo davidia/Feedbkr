@@ -2,6 +2,35 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//div {margin:0px}
+
+
+
+.timestamp{float:right;font-size:12px; margin:2px}
+
+//.sidebar {width:172px;float:left}
+
+.bubble {
+	background: #EEE;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	padding: 3px;
+	margin: 5px 0px;
+}
+
+.comment {
+	border: 1px solid #CACACA;
+
+}
+
+.chead { border-bottom: 1px solid #CCC; padding:2px;height:30px}
+
+.body {background:white; padding:2px}
+
+.venue {float:left;margin:auto 0px}
+.source {float:right;margin:auto 0px}
+
 body.users {
   // Add the users class to your body tag
   // Then, place scoped styles here.
